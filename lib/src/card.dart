@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gamify/src/games_specific/specific_detail.dart';
+import 'package:gamify/src/games_specific/specific_game.dart';
+import 'package:get/get.dart';
 
 class MyCardWidget extends StatelessWidget {  
   MyCardWidget({Key? key, required this.title, required this.subtitle, required this.color}) : super(key: key);  
-   Widget title;
-   Widget subtitle;
+   String title;
+      String  subtitle;
    Color color;
   @override  
   Widget build(BuildContext context) {  
@@ -19,24 +22,29 @@ class MyCardWidget extends StatelessWidget {
         elevation: 10,  
         child: Column(  
           mainAxisSize: MainAxisSize.min,  
-          children: <Widget>[  
+          children: [  
              ListTile(  
-              leading: Icon(Icons.album, size: 20),  
-              title: title, 
+              // leading: Icon(Icons.album, size: 20),  
+              title: Text('$title'), 
               subtitle: Text(  
                 'Best of Sonu Nigam Music.',  
                 style: TextStyle(fontSize: 10.0)  
               ),  
             ),  
-            ButtonBar(  
+            ButtonBar(
+              alignment: MainAxisAlignment.spaceAround,  
               children: <Widget>[  
                 RaisedButton(  
                   child: const Text('Play'),  
-                  onPressed: () {/* ... */},  
+                  onPressed: () {/* ... */
+                  Get.to(SpecificGame(), arguments: [title]);
+                  },  
                 ),  
                 RaisedButton(  
                   child: const Text('Details'),  
-                  onPressed: () {/* ... */},  
+                  onPressed: () {/* ... */
+                  Get.to(SpecificDetail(), arguments: [title]);
+                  },  
                 ),  
               ],  
             ),  

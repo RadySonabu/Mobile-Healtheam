@@ -18,11 +18,11 @@ class GamesPage extends StatelessWidget {
   // spacing: 5.0, // gap between adjacent chips
   // runSpacing: 4.0, // gap between lines
   children: <Widget>[
-    MyCardWidget(title: Text("First Aid"), subtitle: Text("Sample first aid"), color: Colors.red,),
-    MyCardWidget(title: Text("First Aid"), subtitle: Text("Sample first aid"), color: Colors.blue,),
-    MyCardWidget(title: Text("First Aid"), subtitle: Text("Sample first aid"), color: Colors.blue,),
-    MyCardWidget(title: Text("First Aid"), subtitle: Text("Sample first aid"), color: Colors.greenAccent,),
-    MyCardWidget(title: Text("First Aid"), subtitle: Text("Sample first aid"), color: Colors.yellowAccent,),
+    MyCardWidget(title: "First Aid", subtitle: "Sample firt aid", color: Colors.red,),
+    MyCardWidget(title: "Cancer", subtitle: "Sample firt aid", color: Colors.blue,),
+    MyCardWidget(title: "Heart Disease", subtitle: "Sample firt aid", color: Colors.blue,),
+    MyCardWidget(title: "Physical Injury", subtitle: "Sample firt aid", color: Colors.greenAccent,),
+    MyCardWidget(title: "Kidney Disease", subtitle: "Sample firt aid", color: Colors.yellowAccent,),
     // MyCardWidget(),
     // MyCardWidget(),
     // MyCardWidget(),
