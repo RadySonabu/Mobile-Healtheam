@@ -25,16 +25,20 @@ class MyCardWidget extends StatelessWidget {
           children: [  
              ListTile(  
               // leading: Icon(Icons.album, size: 20),  
-              title: Text('$title'), 
+              title: Text('$title', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),), 
               subtitle: Text(  
                 'Best of Sonu Nigam Music.',  
-                style: TextStyle(fontSize: 10.0)  
+                style: TextStyle(fontSize: 10.0,color: Colors.white,)  
               ),  
             ),  
             ButtonBar(
               alignment: MainAxisAlignment.spaceAround,  
               children: <Widget>[  
                 RaisedButton(  
+                  shape: 
+    RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(18.0),
+  ),
                   child: const Text('Play'),  
                   onPressed: () {/* ... */
                   Get.to(SpecificGame(), arguments: [title]);
@@ -42,6 +46,10 @@ class MyCardWidget extends StatelessWidget {
                 ),  
                 RaisedButton(  
                   child: const Text('Details'),  
+                  shape: 
+    RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(18.0),
+  ),
                   onPressed: () {/* ... */
                   Get.to(SpecificDetail(), arguments: [title]);
                   },  
